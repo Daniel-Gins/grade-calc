@@ -2,7 +2,6 @@ def cat_function():
     catdict={}
     while True:
         try:
-            global cat
             cat=int(input("How many Graded categories are there: "))
             break
         except ValueError:
@@ -13,7 +12,7 @@ def cat_function():
         while True:
             try:
                 catname=input("Enter Category names: ")
-                catworth=float(input("How much is it worth in decimal: "))
+                catworth=float(input("How much percent is it worth(don't include percent sign): "))
                 if catname not in catdict:
                     catdict[catname]=catworth 
             except ValueError:
@@ -28,9 +27,11 @@ def cat_function():
                 confirm=(input("Is this correct?: ")).lower()
                 if confirm in confirmset:
                     print("Okay Moving on...")
-                    return False
+                    return catdict               
                 elif confirm in noset:
                     cat_function()
-                    return False
+                    return catdict
                 else:
                     print("Try Again: ")
+
+
