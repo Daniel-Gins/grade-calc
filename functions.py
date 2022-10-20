@@ -2,7 +2,7 @@ def cat_function():
     catdict={}
     while True:
         try:
-            cat=int(input("How many Graded categories are there: "))
+            cat=int(input("How many Graded categories are there in 1 course: "))
             break
         except ValueError:
             print("Please enter a postive integer: \n")
