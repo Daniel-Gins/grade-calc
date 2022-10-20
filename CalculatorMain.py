@@ -1,4 +1,3 @@
-from ast import Return
 from functions import cat_function
 def main():
     def score():
