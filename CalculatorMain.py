@@ -1,3 +1,4 @@
+from ast import Return
 from functions import cat_function
 def main():
     def score():
@@ -7,7 +8,7 @@ def main():
                 catpointlist=[]
                 while len(catpointlist)!=len(x):
                     try:
-                        catpoints=int(input("What percantage for each category?(don't include percent sign): "))
+                        catpoints=int(input("What will your total grade be in that category?(don't include percent sign): "))
                         catpointlist.append(catpoints)
                     except ValueError:
                         print("Please enter integers")
@@ -26,9 +27,20 @@ def main():
         return total
     total=score()
     print("Your total grade will be: ",total,"%")
+    y=input("Press enter to exit or type rerun to start over: ")
+    while True:
+        if y=="rerun":
+            main()
+            break
+        else:
+            SystemExit
+            break
 if __name__ == "__main__":
     main()
-
+    
+            
+        
+    
         
        
 

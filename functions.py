@@ -12,7 +12,7 @@ def cat_function():
         while True:
             try:
                 catname=input("Enter Category names: ")
-                catworth=float(input("How much percent is it worth(don't include percent sign): "))
+                catworth=float(input("How much is it weighted/worth(don't include percent sign): "))
                 if catname not in catdict:
                     catdict[catname]=catworth 
             except ValueError:
